@@ -1,0 +1,42 @@
+create table pessoa (
+  id_pessoa integer,
+  nome varchar (50),
+  cpf varchar(14)
+  );
+  
+ create table curso (
+  id_curso integer,
+  nome varchar (50)
+  
+);
+
+create table mensalidade(
+  id_pessoa integer,
+  id_curso integer,
+  valor number(5,2)
+
+);
+
+insert into pessoa values(1,'Maria Eduarda de Melo e Silva','05802153180');
+insert into pessoa values(2,'Fernando César de Melo e Silva','05802153486');
+
+insert into curso values(1,'Análise de Sistemas');
+insert into curso values(2,'Contabilidade');
+
+insert into mensalidade values(1,1,754.80);
+
+insert into mensalidade values(2,3,00.00);
+
+//
+
+alter table pessoa add constraint id_pessoa_PK primary key (id_pessoa)
+
+alter table curso add constraint id_curso_PK primary key (id_curso)
+
+alter table mensalidade add constraint id_pessoa_fk foreign key (id_pessoa) references pessoa(id_pessoa)
+alter table mensalidade add constraint id_curso_fk foreign key (id_curso) references curso(id_curso)
+//
+
+update mensalidade
+set id_curso = 2
+where id_curso =3

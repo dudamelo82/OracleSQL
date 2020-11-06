@@ -1,0 +1,1 @@
+INSERT into PESSOA VALUES(3,'Alexandre Victor de Melo','05802153182')
