@@ -1,0 +1,106 @@
+/***********************************************************************/
+/*            UNICEUB - CENTRO UNIVERSITÁRIO DE BRASÍLIA               */
+/*                      PRÓ-REITORIA ACADÊMICA                         */
+/*                        DIRETORIA ACADÊMICA                          */
+/*    FACULDADE DE TECNOLOGIA E CIÊNCIAS SOCIAIS APLICADAS - FATECS    */
+/*CURSO SUPERIOR DE TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS*/
+/*   DISCIPLINA DE BANCO DE DADOS - 2° BIM - TURMA: _____ - 2º PER     */
+/*  Professor: DEUSDETH MARIANO         Data: __ de ________ de ____   */
+/***********************************************************************/
+/* RA:__________ Aluno: ______________________________________________ */ 
+/***********************************************************************/
+
+-- QUESTÃO 1) Criar os objetos de BD (tabela e constraints) dos 
+--            itens abaixo de acordo com o MER entregue junto com a prova.
+--
+-- a. Criar a tabela MERCADORIA_ENTRADA , associativa entre FABRICA_EXT, 
+--    MERCADORIA e ARMAZEM. Na criação da tabela (mesmo comando) incluir as 
+--    constraints de PRIMARY KEY, DOMÍNIO e NULIDADE, conforme nomes descritos no 
+--    modelo.
+-- RESOLUÇÃO:
+
+
+-- b. Criar as constraints das CHAVES ESTRANGEIRAS (foreing key) da tabela   
+--    MERCADORIA_ENTRADA com os nomes que estão no MER físico.
+-- RESOLUÇÃO:
+
+
+--    c. Criar as constraints de chave primaria (primary key) para as tabelas associativas.
+-- RESOLUÇÃO:
+
+
+
+-- c. Criar uma constraint de CHECK de nome CK_MERENT_QDE para que a coluna   
+--    QUANTIDADE para não permitir valores negativos, zerado ou nulos.
+-- RESOLUÇÃO:
+
+
+-- d. Criar uma view de nome VW_ESTOQUE para mostrar o estoque de produto existente  
+--    em cada ARMAZEM das lojas (Considerar todos as mercadorias do cadastro): 
+--    Colunas da view: nome do armazem (ARMAZ), descricao da mercadoria 
+--    (PRODUTO), quantidade que entrou (QTD_ENT), quantidade que saiu (QTD_SAI) 
+--    e quantidade disponível (QTD_DISP). Mostrar valores 0 (ZERO) quando não existir.
+-- RESOLUÇÃO:
+
+
+
+
+-- QUESTÃO 2) Inserir os seguintes dados na tabela criada: 
+--
+-- a. Inserir todos os registros da tabela MER_ENT pertencente ao usuário DEMO
+--    (disponível no BD para leitura) na tabela criada MERCADORIA_ENTRADA.
+-- RESOLUÇÃO:
+
+
+
+-- b. Inserir aos seguintes dados na tabela MERCADORIA_ENTRADA: 
+--    Codigo da mercadoria = 19
+--    Quantidade de mercadoria = 123
+--    Data de aquisição = '05/04/2015'
+--    Almoxarifado = 1003
+--    Fabricante = 105
+-- RESOLUÇÃO:
+INSERT INTO MERCADORIA_ENTRADA VALUES('05/04/2015',19, 1003,123, 105);
+
+-- QUESTÃO 3) Alterar na tabela MERCADORIA_ENTRADA o conteúdo do c,ampo QUANTIDADE 
+--            para 321 da inclusão realizada no item b. da QUESTÃO 2).
+-- RESOLUÇÃO:
+
+
+
+-- QUESTÃO 4) Excluir na tabela MERCADORIA_ENTRADA o registro incluído item b. da 
+--            QUESTÃO 2) ACIMA se a situação do armazem for 'Inativo'. 
+-- RESOLUÇÃO:
+
+
+
+
+-- QUESTÃO 5) Implementar as consultas (QUERY) para selecionar os dados 
+--            correspondentes nas tabelas constantes do MER e BD disponibilizado
+--            para a avaliação: 
+-- 
+-- a. Selecionar as mercadorias distintas que deram entradas mas não deram nenhuma  
+--    saída dos armazéns.  
+--    Mostrar: CODIGO e DESCRICAO ordenados decrescente pelo CODIGO da mercadoria.
+-- RESOLUÇÃO:
+
+
+
+
+-- b. Selecionar as fabricas externas e seus respectivos fornecimentos de mercadorias 
+--    nos armazens. Mostrar 0 (ZERO) para aquelas que não realizaram fornecimentos.
+--    Mostrar: ID, NOME e quantidade de fornecimentos (QDE_F), ordenado 
+--             crescente pela QDE_F.
+-- RESOLUÇÃO:
+
+
+-- c. Selecionar as colunas (campos) dos índices relacionados com a tabela MERCADORIA_ENTRADA.
+--    Mostrar: Todas colunas ordenadas pelos nomes dos indices descendente e nomes das colunas
+--             ascendentes.
+-- RESOLUÇÃO:
+
+
+
+
+
+
